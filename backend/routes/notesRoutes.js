@@ -3,6 +3,6 @@ import { createNote } from '../controller/notesController.js'
 
 const router = express.Router()
 
-router.post('/notes', createNote)
+router.route('/notes').post(createNote)
 
 export default router

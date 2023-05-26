@@ -1,4 +1,12 @@
-export const createNote = (req, res) => {
+import Note from '../model/Note.js'
+
+export const createNote = async (req, res) => {
   const { title, noteText } = req.body
-  console.log(title, noteText)
+
+  const note = new Note()
+  note.title = title
+  note.noteText = noteText
+
+  const createdNote = await note.save()
+  res.status(201).json(createdNote)
 }
