@@ -5,7 +5,8 @@
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "server": "node ./backend/server.js"
+    "server": "node ./backend/server.js",
+    "server:dev": "nodemon ./backend/server.js"
   },
   "author": "Tiago Gomes",
   "license": "ISC",
