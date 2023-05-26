@@ -1,9 +1,11 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import notesRoutes from './routes/notesRoutes.js'
+import connectDB from './config/db.js'
 
 const server = express()
 dotenv.config()
+connectDB()
 
 const PORT = process.env.PORT || 5000
 
