@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button'
 import NoteForm from './NoteForm'
 import classes from './Header.module.css'
 
-const Header = () => {
+const Header = ({ onSubmit, titleInput, noteTextInput }) => {
   const [formIsVisible, setFormIsVisible] = useState(false)
 
   function handleFormVisible() {
@@ -24,7 +24,12 @@ const Header = () => {
       </header>
       {formIsVisible && (
         <>
-          <NoteForm onCancel={handleFormInvisible} />
+          <NoteForm
+            onSubmit={onSubmit}
+            onCancel={handleFormInvisible}
+            titleInput={titleInput}
+            noteTextInput={noteTextInput}
+          />
         </>
       )}
     </>
