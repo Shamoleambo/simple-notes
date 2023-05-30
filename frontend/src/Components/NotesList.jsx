@@ -1,9 +1,11 @@
 import Note from './Note'
 
-const NotesList = () => {
+const NotesList = ({ notes }) => {
   return (
     <ul>
-      <Note />
+      {notes.map((note, index) => (
+        <Note key={index} title={note.title} noteText={note.noteText} />
+      ))}
     </ul>
   )
 }

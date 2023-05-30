@@ -1,8 +1,8 @@
-const Note = () => {
+const Note = ({ title, noteText }) => {
   return (
     <li>
-      <h1>Note Title</h1>
-      <p>Note Content</p>
+      <h1>{title}</h1>
+      <p>{noteText}</p>
     </li>
   )
 }

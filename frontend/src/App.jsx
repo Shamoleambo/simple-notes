@@ -11,19 +11,15 @@ function App() {
     const fetchNotes = async () => {
       const fetchedData = await fetch('http://localhost:5000/notes')
       const notes = await fetchedData.json()
-      console.log('fetchNotes', fetchNotes)
-      console.log('fetched notes', notes)
       setNotes(notes)
     }
-
-    console.log('state', notes)
 
     fetchNotes()
   }, [])
   return (
     <main>
       <Header />
-      <NotesList />
+      <NotesList notes={notes} />
     </main>
   )
 }
