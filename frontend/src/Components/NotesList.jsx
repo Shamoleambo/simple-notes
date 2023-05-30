@@ -1,8 +1,9 @@
 import Note from './Note'
+import classes from './NotesList.module.css'
 
 const NotesList = ({ notes }) => {
   return (
-    <ul>
+    <ul className={classes.notesList}>
       {notes.map((note, index) => (
         <Note key={index} title={note.title} noteText={note.noteText} />
       ))}
