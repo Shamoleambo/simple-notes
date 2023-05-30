@@ -6,6 +6,7 @@ import NotesList from './Components/NotesList'
 
 function App() {
   const [notes, setNotes] = useState([])
+  const [formIsVisible, setFormIsVisible] = useState(false)
   const titleInput = useRef('')
   const noteTextInput = useRef('')
 
@@ -18,6 +19,14 @@ function App() {
 
     fetchNotes()
   }, [])
+
+  function handleFormVisible() {
+    setFormIsVisible(true)
+  }
+
+  function handleFormInvisible() {
+    setFormIsVisible(false)
+  }
 
   function handleSubmit(event) {
     event.preventDefault()
@@ -34,12 +43,16 @@ function App() {
       },
       body: JSON.stringify(postData)
     })
+    handleFormInvisible()
   }
 
   return (
     <main>
       <Header
         onSubmit={handleSubmit}
+        onFormVisible={handleFormVisible}
+        onFormInvisible={handleFormInvisible}
+        formIsVisible={formIsVisible}
         titleInput={titleInput}
         noteTextInput={noteTextInput}
       />
