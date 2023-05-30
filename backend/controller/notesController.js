@@ -10,3 +10,9 @@ export const createNote = async (req, res) => {
   const createdNote = await note.save()
   res.status(201).json(createdNote)
 }
+
+export const getNotes = async (req, res) => {
+  const notes = await Note.find().select('-_id -createdAt -updatedAt')
+
+  res.status(200).json(notes)
+}
