@@ -1,4 +1,5 @@
 import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 import classes from './NoteForm.module.css'
 
 const NoteForm = ({ onBackdropClick }) => {
@@ -22,6 +23,24 @@ const NoteForm = ({ onBackdropClick }) => {
             style={{ height: '10rem' }}
           />
         </Form.Group>
+        <div className={classes.buttons}>
+          <Button
+            className={classes.button}
+            variant='primary'
+            type='submit'
+            size='lg'
+          >
+            Create Note
+          </Button>
+          <Button
+            className={classes.button}
+            variant='danger'
+            type='button'
+            size='lg'
+          >
+            Cancel
+          </Button>
+        </div>
       </Form>
     </>
   )
