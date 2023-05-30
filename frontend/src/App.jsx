@@ -4,10 +4,10 @@ import NoteForm from './Components/NoteForm'
 
 function App() {
   return (
-    <>
+    <main>
       <Header />
       <NoteForm />
-    </>
+    </main>
   )
 }
 
