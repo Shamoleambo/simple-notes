@@ -24,7 +24,7 @@ const Header = () => {
       </header>
       {formIsVisible && (
         <>
-          <NoteForm onBackdropClick={handleFormInvisible} />
+          <NoteForm onCancel={handleFormInvisible} />
         </>
       )}
     </>

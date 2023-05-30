@@ -2,10 +2,10 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import classes from './NoteForm.module.css'
 
-const NoteForm = ({ onBackdropClick }) => {
+const NoteForm = ({ onCancel }) => {
   return (
     <>
-      <div className={classes.backdrop} onClick={onBackdropClick}></div>
+      <div className={classes.backdrop} onClick={onCancel}></div>
       <Form className={classes.form}>
         <div className={classes.formControlHeader}>
           <h1>Create Your Note</h1>
@@ -37,6 +37,7 @@ const NoteForm = ({ onBackdropClick }) => {
             variant='danger'
             type='button'
             size='lg'
+            onClick={onCancel}
           >
             Cancel
           </Button>
