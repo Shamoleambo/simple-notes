@@ -18,7 +18,7 @@ function App() {
     }
 
     fetchNotes()
-  }, [])
+  })
 
   function handleFormVisible() {
     setFormIsVisible(true)
