@@ -1,0 +1,16 @@
+.noteItem {
+  margin: 1rem;
+  padding: 0.4rem;
+  background-color: rgb(252, 213, 189);
+  list-style: none;
+  display: block;
+  width: 90%;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
+}
+
+.noteTitle {
+  font-family: 'Courier New', Courier, monospace;
+  border-bottom: 1px solid black;
+}
